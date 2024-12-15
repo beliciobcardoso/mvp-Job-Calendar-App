@@ -11,7 +11,7 @@ const Month: React.FC<{ data: MonthData }> = ({ data }) => (
       {dayNames.map((day) => (
         <div
           key={day}
-          className="text-center text-xs font-medium text-gray-100"
+          className={`text-center p-1 text-sm ${day === "DOM" ? "text-red-700" : "text-gray-100"}`}
         >
           {day}
         </div>
@@ -19,7 +19,7 @@ const Month: React.FC<{ data: MonthData }> = ({ data }) => (
       {data.days.map((day) => (
         <div
           key={day}
-          className={`text-center p-1 text-sm ${day && Number(day) > 0 && Number(day) <= 31 ? "text-gray-200" : "font-medium"}`}
+          className={`text-center p-1 text-sm ${new Date(getYearPrevious,data.index, Number(day)).getDay() === 0  ? "text-red-700" : "text-gray-100"}`}
         >
           {day}
         </div>

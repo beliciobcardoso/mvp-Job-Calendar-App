@@ -22,6 +22,13 @@ export const dayNames = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SÁB"]
 
 export const getYearPrevious = new Date().getFullYear() + 1
 
+// const teste = new Date(2025, 0, 1).getDay()
+// console.log(teste)
+
+// const getDay = (year: number, month: number, day: number) => {
+//   return new Date(year, month, day).getDay()
+// }
+
 export type MonthData = {
   index: number
   name: string
